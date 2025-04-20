@@ -1,0 +1,371 @@
+.welcome {
+    width:100%;
+    height:40%;
+    background-color:lightblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcomemsg {
+    background-color: black;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    min-height: 50%;
+    max-width: 60%;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcomemsg h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color:white;
+}
+
+.welcomemsg h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color:white;
+}
+
+
+/* Big background-less H1 */
+.categories h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: white;
+}
+
+/* Category block */
+.category {
+    margin-bottom: 3rem;
+}
+
+/* Category header in white box */
+.categoryheader {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Subcategory layout container */
+.subcategories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+/* Common subcategory styling */
+.subcategory {
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+
+/* Subcategory size control */
+.thirdcatg {
+    flex-basis: 28%;
+    aspect-ratio: 1 / 1; /* Makes it a square */
+}
+
+.halfcatg {
+    flex-basis: 45%;
+    height: auto;
+    aspect-ratio: 2 / 1; /* Halfcatg gets same height as square, but wider */
+}
+
+.fullcatg {
+    flex-basis: 90%;
+    aspect-ratio: 3 / 1; /* Fullcatg gets same height as square, even wider */
+}
+
+/* Inner content */
+.categorydesc > .categorydesclink {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.categorydesclink a {
+    color: #00bfff;
+}
+
+.categorydesc h6 {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.5;
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .thirdcatg, .halfcatg, .fullcatg {
+        flex-basis: 100%;
+        aspect-ratio: auto;
+    }
+}
+
+
+
+#sticker {
+    background-image: url('images/sticker-meraki-elenaparker.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#tshirt {
+    background-image: url('images/tshirt-modernartist-summerjohnson.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#narrative {
+    background-image: url('images/videonarrative-burn-jacobpulley.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#nonfiction {
+    background-image: url('images/videononfiction-pacificnorthwest-jacobdunn.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#webdesign {
+    background-image: url('images/webdesign-crochetcritters-darcygroves.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#stopmotion {
+    background-image: url('images/stopmotion-brickproduction-emmabrown.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#anim2d {
+    background-image: url('images/2danim-morning-kamaylemon.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#anim3d {
+    background-image: url('images/3danim-thegreenline-kennydelangis.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#raster {
+    background-image: url('images/rastergraphics-webecomeflowers-emeryjensen.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#vector {
+    background-image: url('images/vectorgraphics-threerealmsofarda-leighdavis.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#graphic3d {
+    background-image: url('images/3dgraphics-fatigue-eliwood.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#digitalphoto {
+    background-image: url('images/digitalphoto-goldendazebythecreek-isabelshelly.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#compositephoto {
+    background-image: url('images/compositephoto-redandblueedit-alexanderbowler.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#gamedesign {
+    background-image: url('images/gamedesign-bobothespacekid-gaugegentile.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center top;
+}
+#music {
+    background-image: url('images/musicproduction.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#audio {
+    background-image: url('images/audioproduction.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+#experimental {
+    background-image: url('images/experimental.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ipersonal {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    background-color: gray;
+}
+
+.contactus {
+    background-color:rgb(103 98 143);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+/* Contact Form Header */
+.contactus h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: black;
+}
+
+.contactus p {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1rem;
+    color: black;
+}
+
+/* Icons for Social Links */
+.contacticons {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contacticons a {
+    color: black;
+    margin: 0 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.contacticons a:hover {
+    color: white;
+    transition: 0.4s;
+}
+
+/* Input containers */
+.contactinputs {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+/* Name and Email Side-by-Side */
+.contactinputs .name, .contactinputs #email {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+.contactinputs .name {
+    margin-right: 1rem;
+}
+
+/* Subject Input (Wide) */
+.contactinputs #subject {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Textarea (Wide and Taller) */
+.contactinputs #message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    height: 150px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Submit Button */
+.contactinputs #submit {
+    width:50%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border:0;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.submitbutton {
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* Submit Button Hover Effect */
+.contactinputs #submit:hover {
+    background-color: lightgray;
+    transition: 0.2s;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    .contactinputs .name, .contactinputs #email {
+        margin-right: 0;
+        flex: 1 100%;
+    }
+}

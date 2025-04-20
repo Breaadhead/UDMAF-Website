@@ -1,0 +1,22 @@
+body {
+    color:black
+}
+.content {
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+.middlecontent {
+    background-color: white;
+    width:50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middlecontent img {
+    max-width: 100%;
+    height: auto;
+}
+    

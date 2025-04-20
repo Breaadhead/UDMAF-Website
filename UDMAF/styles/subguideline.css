@@ -1,0 +1,15 @@
+body {
+    color:white;
+}
+
+.content {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    height:1000px;
+}
+
+.content p {
+    padding-top: 200px;
+    font-size: xx-large;
+}
