@@ -25,8 +25,9 @@ h1, h2, h3, h4, h5, h6{
 
 #upicon {
     transition: transform 0.3s ease;
-  }
-  
+}  
+/* icon rotation   */
+
 #guidelinestext {
     padding-right: 4px;
 }
@@ -45,6 +46,7 @@ h1, h2, h3, h4, h5, h6{
 .guidedropdown:hover #upicon {
     transform: rotate(180deg);
 }
+/* when guidedropdown or any of the list items on the dropdown are hovered, the arrow icon will rotate upside-down */
 .guidedropdown:hover #guidelineslink {
     background-color:white;
 }
@@ -136,6 +138,7 @@ h1, h2, h3, h4, h5, h6{
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
+/* dropdown menu is hidden by default, and will change transform to 10px down. z-index makes sure it's always on the top of any element  */
 #bottoma {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -146,7 +149,7 @@ h1, h2, h3, h4, h5, h6{
     visibility: visible;
     transform: translateY(0);
 }
-
+/* dropdown menu animation */
 .guidedropdownmenu li a {
     display: block;
     padding: 10px 15px;
@@ -160,7 +163,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 footer {
-    background-color: #111; /* Slightly lighter than black for subtle contrast */
+    background-color: #111;
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -194,7 +197,7 @@ footer {
 }
 
 .footericons a:hover {
-    color: #00bfff; /* Optional hover color */
+    color: #00bfff;
 }
 
 .footer p {
@@ -209,7 +212,7 @@ footer {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     will-change: opacity, transform;
   }
-  
+  /* fade-in elements are invisible by default, but will change opacity and move upward slightly when the javascript tells it to */
   .fade-in-section.visible {
     opacity: 1;
     transform: translateY(0);

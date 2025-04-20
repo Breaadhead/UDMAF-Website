@@ -32,8 +32,6 @@
     color:white;
 }
 
-
-/* Big background-less H1 */
 .categories h1 {
     font-size: 4rem;
     text-align: center;
@@ -46,7 +44,6 @@
     margin-bottom: 3rem;
 }
 
-/* Category header in white box */
 .categoryheader {
     background-color: white;
     color: black;
@@ -82,18 +79,18 @@
 /* Subcategory size control */
 .thirdcatg {
     flex-basis: 28%;
-    aspect-ratio: 1 / 1; /* Makes it a square */
+    aspect-ratio: 1 / 1; /* makes it a square */
 }
 
 .halfcatg {
     flex-basis: 45%;
     height: auto;
-    aspect-ratio: 2 / 1; /* Halfcatg gets same height as square, but wider */
+    aspect-ratio: 2 / 1; /* .halfcatg .fullcatg is 2 times wider than tall */
 }
 
 .fullcatg {
     flex-basis: 90%;
-    aspect-ratio: 3 / 1; /* Fullcatg gets same height as square, even wider */
+    aspect-ratio: 3 / 1; /* .fullcatg is 3 times wider than tall*/
 }
 
 /* Inner content */
@@ -115,7 +112,7 @@
 }
 
 
-/* Responsive tweak */
+/* some mobile stuff */
 @media (max-width: 768px) {
     .thirdcatg, .halfcatg, .fullcatg {
         flex-basis: 100%;
@@ -228,24 +225,6 @@
     background-position: center center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #ipersonal {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -260,7 +239,7 @@ input {
     padding-top: 30px;
     padding-bottom: 40px;
 }
-/* Contact Form Header */
+
 .contactus h1 {
     font-size: 3rem;
     text-align: center;
@@ -275,7 +254,7 @@ input {
     color: black;
 }
 
-/* Icons for Social Links */
+/* social icons */
 .contacticons {
     text-align: center;
     margin: 2rem 0;
@@ -302,7 +281,6 @@ input {
 
 }
 
-/* Name and Email Side-by-Side */
 .contactinputs .name, .contactinputs #email {
     flex: 1;
     padding: 1rem;
@@ -317,7 +295,7 @@ input {
     margin-right: 1rem;
 }
 
-/* Subject Input (Wide) */
+/* Subject input (Wide) */
 .contactinputs #subject {
     padding: 1rem;
     border-radius: 0.5rem;
@@ -327,7 +305,7 @@ input {
     font-size: 1rem;
 }
 
-/* Textarea (Wide and Taller) */
+/* Textarea (wide but taller) */
 .contactinputs #message {
     padding: 1rem;
     border-radius: 0.5rem;
@@ -339,7 +317,7 @@ input {
     font-family: 'Lato', sans-serif;
 }
 
-/* Submit Button */
+/* submit button */
 .contactinputs #submit {
     width:50%;
     padding: 1rem;
@@ -356,13 +334,12 @@ input {
     justify-content: center;
 }
 
-/* Submit Button Hover Effect */
 .contactinputs #submit:hover {
     background-color: lightgray;
     transition: 0.2s;
 }
 
-/* Responsive Adjustment */
+/* more mobile stuff */
 @media (max-width: 768px) {
     .contactinputs .name, .contactinputs #email {
         margin-right: 0;
