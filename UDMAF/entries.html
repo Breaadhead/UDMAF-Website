@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
     
-        <link rel="stylesheet" href="styles/subguideline.css">
+        <link rel="stylesheet" href="styles/entries.css">
         <link rel="stylesheet" href="styles/common.css">
         <script src="index.js"></script>
         <title>Guideline | Utah Digital Media Arts Festival</title>
@@ -60,9 +60,114 @@
             </div>
         </div>
     </div>
+    
     <div class="content">
-        <p> *insert 2025 submission powerpoint here* (I can't, because I don't know who will win!)</p>
+        <div class="yearSelect-wrapper">
+            <label for="yearSelect">Select a year:</label>
+            <select id="yearSelect" onchange="changeYear(this.value)">
+                <option value="2025" selected>2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+        <div class="yeardisplays">
+            <div id="year2025" class="year-section">
+                <p>This doesn't exist yet, check 2024</p>
+            </div>
+            <div id="year2024" class="year-section" style="display:none;">
+                <div class="slideshow-container">
+                    <div class="slider-wrapper" id="slider-wrapper">
+                        <!-- images will be inserted here by JavaScript -->
+                    </div>
+                    <div class="slidenav-wrapper">
+                        <button class="slidenav left" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="goto-first" onclick="gotoFirstSlide()">Go to first slide</button>
+                        <button class="slidenav right" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div id="year2023" class="year-section" style="display: none;"><p>Slideshow would be here</p></div>
+            <div id="year2022" class="year-section" style="display: none;"><p>Slideshow would be here</p></div>
+            <div id="year2021" class="year-section" style="display: none;"><p>Slideshow would be here</p></div>
+            </div>
     </div>
+<script>
+    const totalSlides = 76;
+    const wrapper = document.getElementById('slider-wrapper');
+    const slides = [];
+    for (let i = 1; i <= totalSlides; i++) {
+      const img = document.createElement('img');
+      img.src = `imageslides/2024-${i}.avif`;
+      img.classList.add('slide-image');
+      slides.push(img);
+    }
+    const firstClone = slides[0].cloneNode();
+    const lastClone = slides[slides.length - 1].cloneNode();
+    wrapper.appendChild(lastClone);
+    slides.forEach(img => wrapper.appendChild(img));
+    wrapper.appendChild(firstClone);
+    let currentSlide = 1;
+    function updateSlide(instant = false) {
+      const offset = currentSlide * wrapper.clientWidth;
+      wrapper.style.transition = instant ? 'none' : 'transform 0.5s ease-in-out';
+      wrapper.style.transform = `translateX(-${offset}px)`;
+    }
+    function updateArrowVisibility() {
+        const leftArrow = document.querySelector('.slidenav.left');
+        const rightArrow = document.querySelector('.slidenav.right');
+        if (currentSlide === 1) {
+            leftArrow.classList.add('disabled');
+        } else {
+            leftArrow.classList.remove('disabled');
+        }
+        if (currentSlide === totalSlides) {
+            rightArrow.classList.add('disabled');
+        } else {
+            rightArrow.classList.remove('disabled');
+        }
+    }
+    function changeSlide(direction) {
+        if ((direction === -1 && currentSlide === 1) || (direction === 1 && currentSlide === totalSlides)) return;
+        currentSlide += direction;
+        updateSlide();
+        updateArrowVisibility();
+    }
+    function gotoFirstSlide() {
+        currentSlide = 1;
+        updateSlide();
+        updateArrowVisibility();
+    }
+
+    window.addEventListener('resize', () => {
+      updateSlide(true);
+    });
+    updateSlide(true);
+    updateArrowVisibility();
+</script>
+<script>
+    function changeYear(year) {
+        document.querySelectorAll('.year-section').forEach(div => {
+            div.style.display = 'none';
+        });
+        document.getElementById('year' + year).style.display = 'flex';
+        if (year === '2024') {
+            updateSlide(true);
+            updateArrowVisibility();
+        }
+    }
+    changeYear('2025')
+</script>
+    
+    
+    
+    
+    
+    
+
+
+
 </body>
 <footer>
     <div class="footer">
